@@ -1,0 +1,9 @@
+#!/bin/sh
+
+while read file
+do
+	case $1 in 
+	  "s") setwal "$file" ;;
+	  "Delete") rm -rf "$file" ;;
+	esac
+done
