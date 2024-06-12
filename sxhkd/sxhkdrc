@@ -9,7 +9,7 @@ shift + Print
 	$HOME/.local/bin/maimpick
 alt + 8 
 	$HOME/.local/bin/dmenumount
-alt +9
+alt + 9
 	$HOME/.local/bin/dmenuumount
 
 #{F12,F11}
@@ -21,11 +21,12 @@ XF86Audio{RaiseVolume,LowerVolume,Mute}
 	pamixer -{i,d,t} 5 
 XF86Audio{Play,Next,Prev}
 	playerctl --player=mpd {play-pause,next,previous} 
-XF86Tools
+shift + XF86AudioPause
 	$TERMINAL -e ncmpcpp
 
 shift + XF86Audio{Next,Prev}
 	mpc {seekthrough +00:00:05,seekthrough -00:00:05} 
+
 # Utilites
 alt + F2
 	$HOME/.local/bin/ideapad-cm {enable,disable} && notify-send -t 3000 "$($HOME/.local/bin/ideapad-cm status)"
