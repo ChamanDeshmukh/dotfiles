@@ -1,0 +1,25 @@
+#    ___  _    _____ ___  _____ 
+#   / _ \| |  |_   _/ _ \/  ___| 
+#  / /_\ \ |    | |/ /_\ \ `--. 
+#  |  _  | |    | ||  _  |`--. \
+#  | | | | |____| || | | /\__/ /
+#  \_| |_|_____|___|_| |_|____/ 
+
+
+# sudo not required for some system commands
+for command in mount umount sv pacman updatedb su shutdown poweroff reboot ; do
+	alias $command="sudo $command"
+done; unset command
+
+# Commands/Functions
+alias ls="ls -h --color=auto --group-directories-first"
+alias grep="grep --color=always"
+alias diff="diff --color=always"
+pacsrt(){grep -iE 'installed|removed' /var/log/pacman.log | sort -k 1 | uniq | tail -n 25 }
+alias wget="wget --hsts-file $XDG_CACHE_DIR/wget/history"
+hzh() {< ~/.cache/zsh/history | sort | uniq | sort | fzf |tr -d '\n'| xclip -selection c;}
+
+# devour
+#alias mpv="devour mpv"
+#alias sxiv="devour sxiv"
+#alias zathura="devour zathura"
