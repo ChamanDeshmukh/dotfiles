@@ -1,0 +1,4 @@
+#!/bin/bash
+
+xwallpaper --center "$1"
+wal -i "$1" > /dev/null

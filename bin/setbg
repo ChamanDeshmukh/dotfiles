@@ -1,0 +1,8 @@
+#!/bin/bash
+
+wall=$(find $HOME/pics/wallpaper -type f | shuf -n 1)
+echo "Setting Wallpaper..."
+xwallpaper --zoom $wall
+wal -i $wall >/dev/null
+echo "DONE ^_^... Enjoy"
+

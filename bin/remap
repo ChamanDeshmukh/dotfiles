@@ -1,0 +1,9 @@
+#!/bin/sh
+
+xset r rate 300 60 & 
+xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape' & 
+setxkbmap -option caps:swapescape
+synclient TapButton2=3 &
+synclient TapButton3=2 &
+libinput-gestures-setup start &
+

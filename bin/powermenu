@@ -1,0 +1,9 @@
+#!/bin/sh
+
+case "$(printf "Hibernate\\nRestart\\nLock\\nSleep\\nPoweroff" | dmenu -l 5 -i -p "Select : ")" in
+	"Poweroff") sudo systemctl poweroff;;
+	"Restart") sudo systemctl reboot;;
+	"Lock") betterlockscreen -l dim;;
+	"Sleep") betterlockscreen -l dim & sudo systemctl suspend;;
+	"Hibernate") betterlockscreen -l dim & sudo systemctl hibernate;;
+esac
