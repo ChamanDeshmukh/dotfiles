@@ -1,7 +1,9 @@
-mpv/watch_later
-mpd/database
-vim/viminfo
-vim/.netrwhist
-vim/pack/
-zathura/zathurarc.bak
-ncmpcpp/error.log
+.config/mpv/watch_later
+.config/mpd/database
+.config/vim/viminfo
+.config/vim/.netrwhist
+.config/vim/pack/
+.config/zathura/zathurarc.bak
+.config/ncmpcpp/error.log
+.config/tmux/plugins/*
+.config/zsh/.zcompdump
