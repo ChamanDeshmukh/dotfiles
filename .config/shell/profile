@@ -22,7 +22,7 @@ export XDG_CACHE_DIR="$HOME/.cache"
 export XDG_CONFIG_DIR="$HOME/.config"
 export ZDOTDIR="$XDG_CONFIG_DIR/zsh"
 export LESSHISTFILE="$XDG_CACHE_DIR/less/history"
-export XAUTHORITY=/tmp/Xauthority
+#export XAUTHORITY=/tmp/Xauthority
 export WATCH_INTERVAL=0.1
 
 export FZF_DEFAULT_OPTS="--layout=reverse"
