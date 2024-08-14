@@ -17,6 +17,7 @@ setopt interactive_comments
 HISTSIZE=10000000
 SAVEHIST=10000000
 HISTFILE=~/.cache/zsh/history
+setopt incappendhistory
 
 # Basic auto/tab complete:
 autoload -U compinit
@@ -66,6 +67,7 @@ bindkey "^a" beginning-of-line
 bindkey "^z" end-of-line
 bindkey "^H" kill-word 
 bindkey "^[^?" backward-kill-word 
+bindkey -M menuselect '^[[Z' reverse-menu-complete
 
 # Vim From Terminal
 autoload edit-command-line; zle -N edit-command-line

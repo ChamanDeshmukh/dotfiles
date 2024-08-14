@@ -6,7 +6,7 @@ xrdb merge /home/chaman/.config/x11/Xresources
 xset r rate 300 60 &
 picom --backend glx --vsync --blur-background --shadow-ignore-shaped -i 0.9 --active-opacity 0.9 -f &
 
-feh --bg-fill ~/.local/share/wall.png &
+feh --bg-fill ~/.local/share/wall.png --no-fehbg &
 
 dash ~/.config/chadwm/scripts/bar.sh &
 while type chadwm >/dev/null; do chadwm && continue || break; done
