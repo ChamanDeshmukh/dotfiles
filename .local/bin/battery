@@ -18,6 +18,7 @@ esac
 
 # Loop through all attached batteries and format the info
 for battery in /sys/class/power_supply/BAT?*; do
+  bluetooth_battery=$(bluetoothctl info | grep 'Battery Percentage' | awk -F'[()]' '{print $2}')
 	# If non-first battery, print a space separator.
 	[ -n "${capacity+x}" ] && printf " "
 	# Sets up the status and capacity
@@ -33,8 +34,11 @@ for battery in /sys/class/power_supply/BAT?*; do
 	# Will make a warn variable if discharging and low
 	[ "$status" = "🔋" ] && [ "$capacity" -le 25 ] && warn="❗"
 	# Prints the info
-	printf "%s %s%d%%" "$status" "$warn" "$capacity"; unset warn
-
+  if [ -n "$bluetooth_battery" ]; then
+      printf "%s %d %s %s%d" "BT_BAT" "$bluetooth_battery" "$status" "$warn" "$capacity"; unset warn
+  else 
+      printf "%s %s%d%%" "$status" "$warn" "$capacity"; unset warn
+  fi
 done && printf "\\n"
 
 #		"Full") status="⚡" ;;
