@@ -13,8 +13,8 @@ alt + 9
 	$HOME/.local/bin/dmenuumount
 
 #{F12,F11}
-XF86MonBrightness{Up,Down}
-	sudo xbacklight {+5,-5}
+# XF86MonBrightness{Up,Down}
+# 	sudo xbacklight {+5,-5}
 
 # Volume and Music Bindings
 XF86Audio{RaiseVolume,LowerVolume,Mute}

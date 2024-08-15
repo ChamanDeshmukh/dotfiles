@@ -18,6 +18,8 @@ HISTSIZE=10000000
 SAVEHIST=10000000
 HISTFILE=~/.cache/zsh/history
 setopt incappendhistory
+setopt append_history 
+setopt share_history 
 
 # Basic auto/tab complete:
 autoload -U compinit
