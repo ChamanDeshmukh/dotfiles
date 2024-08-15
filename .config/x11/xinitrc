@@ -10,6 +10,7 @@ feh --bg-fill ~/.local/share/wall.png --no-fehbg &
 /usr/lib/notification-daemon-1.0/notification-daemon &
 /home/chaman/.local/bin/remap &
 /home/chaman/.local/bin/battery_notify &
+xidlehook --not-when-audio --not-when-fullscreen --timer 120 '/home/chaman/.local/bin/betterlockscreen -l blur -q' '' &
 
 dash ~/.config/chadwm/scripts/bar.sh &
 while type chadwm >/dev/null; do chadwm && continue || break; done
