@@ -6,9 +6,9 @@
 #  \_____|_|   \_| \_|\___/\_|    \___/\_____|____/ 
 
 # Global Variable 
-export EDITOR="vim"
+export EDITOR="nvim"
 export TERMINAL="st"
-export BROWSER="w3m"
+export BROWSER="thorium-browser"
 
 # Adding my scripts Folder to my PATH variable
 export PATH=$PATH:/home/chaman/.local/bin
@@ -27,6 +27,7 @@ export RUST_HOME="$XDG_CONFIG_DIR/rust"
 export CARGO_HOME="$XDG_CONFIG_DIR/cargo"
 
 export FZF_DEFAULT_OPTS="--layout=reverse"
+
 # Music Player Daemon
 #[ ! -s ~/.config/mpd/pid ] && mpd
 
