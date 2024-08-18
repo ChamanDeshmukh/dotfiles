@@ -12,7 +12,6 @@ export BROWSER="w3m"
 
 # Adding my scripts Folder to my PATH variable
 export PATH=$PATH:/home/chaman/.local/bin
-. "$HOME/.cargo/env"
 
 # Clean the ~/ 
 export XDG_HOME_DIR="$HOME"
@@ -24,6 +23,8 @@ export ZDOTDIR="$XDG_CONFIG_DIR/zsh"
 export LESSHISTFILE="$XDG_CACHE_DIR/less/history"
 #export XAUTHORITY=/tmp/Xauthority
 export WATCH_INTERVAL=0.1
+export RUST_HOME="$XDG_CONFIG_DIR/rust"
+export CARGO_HOME="$XDG_CONFIG_DIR/cargo"
 
 export FZF_DEFAULT_OPTS="--layout=reverse"
 # Music Player Daemon
