@@ -7,3 +7,5 @@
 .config/ncmpcpp/error.log
 .config/tmux/plugins/*
 .config/zsh/.zcompdump
+.config/nvim/lazy-lock.json
+.config/nvim/.stylua.toml
