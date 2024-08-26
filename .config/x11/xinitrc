@@ -2,16 +2,16 @@
 
 
 
-xrdb merge /home/chaman/.config/x11/Xresources
+xrdb merge $HOME/.config/x11/Xresources
 xset r rate 300 60 &
-picom --backend glx --vsync --blur-background --shadow-ignore-shaped -f --config /home/chaman/.config/picom/picom.conf &
+picom --backend glx --vsync --blur-background --shadow-ignore-shaped -f --config $HOME/.config/picom/picom.conf &
 
-feh --bg-fill ~/.local/share/wall.png --no-fehbg &
+feh --bg-fill $HOME/local/share/wall.png --no-fehbg &
 /usr/lib/notification-daemon-1.0/notification-daemon &
-/home/chaman/.local/bin/remap &
-/home/chaman/.local/bin/battery_notify &
-xidlehook --not-when-audio --not-when-fullscreen --timer 60 '/home/chaman/.local/bin/betterlockscreen -l blur -q' '' &
+$HOME/.local/bin/remap &
+$HOME/.local/bin/battery_notify &
+xidlehook --not-when-audio --not-when-fullscreen --timer 60 '$HOME/.local/bin/betterlockscreen -l blur -q' '' &
 sxhkd &
 
-dash ~/.config/chadwm/scripts/bar.sh &
+dash $HOME/.config/chadwm/scripts/bar.sh &
 while type chadwm >/dev/null; do chadwm && continue || break; done
