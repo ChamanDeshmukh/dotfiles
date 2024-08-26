@@ -29,7 +29,7 @@ shift + XF86Audio{Next,Prev}
 
 # Utilites
 alt + F2
-	$HOME/.local/bin/ideapad-cm {enable,disable} && notify-send -t 3000 "$($HOME/.local/bin/ideapad-cm status)"
+  st -n floatterm -g 60x1 -e $HOME/.local/bin/ideapad-cm {enable,disable} && notify-send -t 3000 "$($HOME/.local/bin/ideapad-cm status)"
 F10
 	$HOME/.local/bin/displayselect
 F6 

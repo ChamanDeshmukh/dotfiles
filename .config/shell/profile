@@ -20,13 +20,14 @@ export XDG_DOCUMENTS_DIR="$HOME/docs"
 export XDG_CACHE_DIR="$HOME/.cache"
 export XDG_CONFIG_DIR="$HOME/.config"
 export ZDOTDIR="$XDG_CONFIG_DIR/zsh"
+export HISTFILE="$XDG_CACHE_DIR/zsh/history"
 export LESSHISTFILE="$XDG_CACHE_DIR/less/history"
 #export XAUTHORITY=/tmp/Xauthority
 export WATCH_INTERVAL=0.1
 export RUST_HOME="$XDG_CONFIG_DIR/rust"
 export CARGO_HOME="$XDG_CONFIG_DIR/cargo"
 
-export FZF_DEFAULT_OPTS="--layout=reverse"
+export FZF_DEFAULT_OPTS="--layout=reverse --tac"
 
 # Music Player Daemon
 #[ ! -s ~/.config/mpd/pid ] && mpd
