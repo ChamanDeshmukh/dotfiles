@@ -14,5 +14,5 @@ xidlehook --not-when-audio --not-when-fullscreen --timer 60 '$HOME/.local/bin/be
 sxhkd &
 dunst &
 
-dash /home/chaman/.config/chadwm_setup/chadwm/bar.sh &
+dash $HOME/.config/chadwm_setup/chadwm/bar.sh &
 while type chadwm >/dev/null; do chadwm && continue || break; done
