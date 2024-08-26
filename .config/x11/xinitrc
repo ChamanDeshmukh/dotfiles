@@ -13,5 +13,5 @@ $HOME/.local/bin/battery_notify &
 xidlehook --not-when-audio --not-when-fullscreen --timer 60 '$HOME/.local/bin/betterlockscreen -l blur -q' '' &
 sxhkd &
 
-dash $HOME/.config/chadwm/scripts/bar.sh &
+dash ~/.config/chadwm/scripts/bar.sh &
 while type chadwm >/dev/null; do chadwm && continue || break; done
