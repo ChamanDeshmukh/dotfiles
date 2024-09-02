@@ -105,8 +105,8 @@ nnoremap <C-f> :NERDTreeFind<CR>
 " Close the tab if NERDTree is the only window remaining in it.
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
-let g:vimwiki_list = [{'path': '/home/chaman/stg/ld_d/school/vault/B.TECH/','syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_list = [{'path': '$HOME/stg/ld_d/school/vault/B.TECH/','syntax': 'markdown', 'ext': '.md'}]
 
 autocmd BufWritePost ~/.local/share/dwm_setup/dwmblocks/config.h !cd ~/.local/share/dwm_setup/dwmblocks/; sudo make install && { killall -q dwmblocks;setsid dwmblocks & }
 
-:so /home/chaman/.config/vim/snippet.vim
+:so $XDG_CONFIG_HOME/vim/snippet.vim
