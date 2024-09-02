@@ -9,3 +9,4 @@
 .config/zsh/.zcompdump
 .config/nvim/lazy-lock.json
 .config/nvim/.stylua.toml
+.local/share/applications/mimeapps.list
