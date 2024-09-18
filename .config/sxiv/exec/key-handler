@@ -3,7 +3,10 @@
 while read file
 do
 	case $1 in 
-	  "s") setwal "$file" ;;
-	  "Delete") rm -rf "$file" ;;
+	  "s") 
+          feh --bg-scale $file --no-fehbg ;;
+	  
+    "Delete") 
+          [ "$(printf "No\\nYes" | dmenu -i -l 2 -p "Really delete $file?")" = "Yes" ] && rm "$file" && notify-send "$file deleted." ;;
 	esac
 done
