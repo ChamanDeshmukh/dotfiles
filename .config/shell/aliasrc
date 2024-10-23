@@ -17,7 +17,7 @@ alias grep="grep --color=always"
 alias diff="diff --color=always"
 pacsrt(){grep -iE 'installed|removed' /var/log/pacman.log | sort -k 1 | uniq | tail -n 25 }
 alias wget="wget --hsts-file $XDG_CACHE_DIR/wget/history"
-hzh() {< ~/.cache/zsh/history | sed 's/: [0-9]*:[0-9]*;//g' | uniq | fzf |tr -d '\n'| xclip -selection c;}
+hzh() {< ~/.cache/zsh/* | sed 's/: [0-9]*:[0-9]*;//g' | uniq | fzf |tr -d '\n'| xclip -selection c;}
 
 # devour
 #alias mpv="devour mpv"
