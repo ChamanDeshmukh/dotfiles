@@ -4,8 +4,11 @@ while read file
 do
 	case $1 in 
 	  "s") 
-          feh --bg-scale $file --no-fehbg ;;
+          ln -sf $(pwd)/$file ~/.local/share/wall.png && feh --bg-scale $file --no-fehbg ;;
 	  
+	  "l") 
+          ln -sf $(pwd)/$file ~/.local/share/lock.png && betterlockscreen --update ~/.local/share/lock.png --desc "Enter Password" ;;
+
     "Delete") 
           [ "$(printf "No\\nYes" | dmenu -i -l 2 -p "Really delete $file?")" = "Yes" ] && rm "$file" && notify-send "$file deleted." ;;
 	esac
