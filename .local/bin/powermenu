@@ -4,6 +4,6 @@ case "$(printf "Hibernate\\nRestart\\nLock\\nSleep\\nPoweroff" | dmenu -l 5 -i -
 	"Poweroff") systemctl poweroff;;
 	"Restart") systemctl reboot;;
 	"Lock") betterlockscreen -l blur;;
-	"Sleep") betterlockscreen -l blur & systemctl suspend;;
+	"Sleep")  betterlockscreen -l blur & systemctl suspend-then-hibernate;;
 	"Hibernate") betterlockscreen -l blur & systemctl hibernate;;
 esac
