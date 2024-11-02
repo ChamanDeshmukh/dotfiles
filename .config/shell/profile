@@ -30,7 +30,6 @@ export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
 #export XAUTHORITY=/tmp/Xauthority
 
 export WATCH_INTERVAL=0.1
-export FZF_DEFAULT_OPTS="--layout=reverse --tac"
 
 # Music Player Daemon
 #[ ! -s ~/.config/mpd/pid ] && mpd
