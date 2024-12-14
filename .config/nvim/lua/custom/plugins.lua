@@ -33,6 +33,9 @@ local plugins = {
       vim.g.vimtex_indent_enabled = 0
 
       vim.g.vimtex_view_method = 'zathura'
+      vim.g.vimtex_compiler_latexmk = {
+        aux_dir = "/tmp/" -- you can set here whatever name you desire
+      }
       -- vim.g.snipmate_snippets_path = '~/.config/snippets/'
     end,
   },
