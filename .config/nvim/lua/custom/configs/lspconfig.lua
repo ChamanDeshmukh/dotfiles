@@ -1,7 +1,7 @@
-local on_attach = require("configs.lspconfig").on_attach
-local capabilities = require("configs.lspconfig").capabilities
+local on_attach = require("lua.configs.lspconfig").on_attach
+local capabilities = require("lua.configs.lspconfig").capabilities
 
-local lspconfig = require "lspconfig" 
+local lspconfig = require "lua.configs.lspconfig" 
 
 lspconfig.rust_analyzer.setup({
   on_attach = on_attach,
