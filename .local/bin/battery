@@ -18,7 +18,7 @@ esac
 
 # Loop through all attached batteries and format the info
 for battery in /sys/class/power_supply/BAT?*; do
-  bluetooth_battery=$(bluetoothctl info | grep 'Battery Percentage' | awk -F'[()]' '{print $2}')
+  bluetooth_battery=$(bluetoothctl info $(bluetoothctl devices | grep -i 'ANC' | grep -oE '([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})' --color=never -) | grep 'Battery Percentage' | awk -F'[()]' '{print $2}')
 	# If non-first battery, print a space separator.
 	[ -n "${capacity+x}" ] && printf " "
 	# Sets up the status and capacity
