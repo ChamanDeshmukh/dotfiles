@@ -17,7 +17,7 @@ local plugins = {
     "neovim/nvim-lspconfig",
     config = function ()
       require "configs.lspconfig"
-      require "custom.configs.lspconfig"
+      -- require "custom.lspconfig"
     end,
   },
 
@@ -62,6 +62,11 @@ local plugins = {
           ),
         })
     end,
-  }
+  },
+  {
+    "alexxGmZ/Md2Pdf",
+    lazy=false,
+    cmd = "Md2Pdf"
+  },
 }
 return plugins
