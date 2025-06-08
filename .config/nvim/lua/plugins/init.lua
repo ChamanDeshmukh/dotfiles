@@ -1,3 +1,5 @@
+require"custom.plugins"
+
 return {
   {
     "stevearc/conform.nvim",

@@ -2,6 +2,7 @@
 -- https://github.com/NvChad/ui/blob/v2.5/lua/nvconfig.lua
 
 ---@type ChadrcConfig
+local chadrc = require("custom.chadrc")
 local M = {}
 
 M.base46 = {
